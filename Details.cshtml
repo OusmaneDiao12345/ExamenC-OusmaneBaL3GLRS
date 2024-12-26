@@ -1,0 +1,46 @@
+@model Projet_csharpt.Models.Client  
+@using Projet_csharp.Models  
+@using Microsoft.AspNetCore.Mvc 
+
+@{
+    ViewData["Title"] = "Client Page";
+    @* Layout = "_Layout"; *@
+}
+@{
+<h2>Détails du Client</h2>
+
+<div>
+    <h4>Client</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Nom
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Nom
+        </dd>
+        <dt class="col-sm-2">
+            Prénom
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Prenom
+        </dd>
+        <dt class="col-sm-2">
+            Téléphone
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Telephone
+        </dd>
+        <dt class="col-sm-2">
+            Adresse
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Adresse
+        </dd>
+    </dl>
+</div>
+<div>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Retour à la Liste</a>
+</div>
+
+}

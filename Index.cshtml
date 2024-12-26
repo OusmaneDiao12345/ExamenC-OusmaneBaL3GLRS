@@ -1,0 +1,30 @@
+@model Projet_csharp.Models.Paiement 
+@using Projet_csharp.Models 
+@using Microsoft.AspNetCore.Mvc  
+
+@{
+    <h2>Paiements</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Montant</th>
+            <th>Client</th>
+            <th>Type de Paiement</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var paiement in Model)
+        {
+            <tr>
+                <td>@paiement.Date.ToString("dd/MM/yyyy")</td>
+                <td>@paiement.Montant</td>
+                <td>@paiement.Client.Nom @paiement.Client.Prenom</td>
+                <td>@paiement.TypePaiement</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+}
+
