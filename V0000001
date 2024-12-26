@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace YourNamespace.Migrations
+namespace Projet_csharp.Migrations
 {
     public partial class V0000001 : Migration
     {
